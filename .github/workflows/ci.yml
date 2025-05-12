@@ -1,0 +1,15 @@
+name: CI Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Display app.txt content
+      run: |
+        cat app.txt
